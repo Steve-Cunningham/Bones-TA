@@ -20,6 +20,7 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: #565656;
+	background-color: $ta-lt-gray;
 }
 
 /********************
@@ -150,7 +151,53 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+	background-color: $ta-black;
+	#category-header {
+		display: none;
+		background-color: $ta-lt-green;
+		border-top-left-radius: 1em;
+		border-top-right-radius: 1em;
+		.threecol {
+			.slposts-widget {
+				margin: 0;
+				.slposts-container {
+					slposts-ulist-wtitle {
+						font-size: 1.5em;
+						margin-bottom: 0 !important;
+						border: none !important;
+						text-align: center;
+					}
+					.slposts-wrapper {
+						.slposts-block-item {
+							margin-bottom: .8em;
+							.slposts-caption {
+								h3 {
+									margin: 0;
+									text-align: left;
+									a {
+										font-size: .8em !important;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#inner-header {
+		background-color: $ta-black;
+		#logo {
+
+		}
+
+		.eightcol {
+
+		}
+	}
+}
 
 	#logo {}
 
@@ -170,14 +217,18 @@ and more scalable.
 	border: 1px solid #ccc;
 	border-bottom: 0;
 
-	li {
+	ul.nav {
 
+	}
+	li {
+		font-size: 1.1em;
 		a {
 			display: block;
 			text-decoration: none;
 			padding: 10px 10px;
-			background-color: #eee;
-			border-bottom: 1px solid #ccc;
+			border: none;
+			color: $ta-lt-gray;
+			background-color: $ta-black;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -188,6 +239,7 @@ and more scalable.
 			&:hover, &:focus {
 
 			}
+			
 		}
 
 		&:first-child {}
@@ -208,6 +260,8 @@ and more scalable.
 
 				a {
 					padding-left: 30px;
+					border-bottom: none;
+					font-size: 1.1em;
 
 					&:hover,
 					&:focus {}
@@ -237,6 +291,56 @@ and more scalable.
 
 } /* end .nav */
 
+
+/*************************
+NAVIGATION DISPLAY CONTROL
+*************************/
+nav#mobile{
+	display: block;
+	}
+nav#desktop{
+	display:none;
+}
+div.nav-toggle {
+	@extend .button;
+	display:block;
+/*	position: absolute;
+	top: 0.5em;
+	right: 0.5em;*/
+	padding: 3px;
+	margin: 0;
+	line-height: 0;
+	font-size: 1.2em;
+
+	border: solid 1px $ta-gray;
+	background-color: $ta-black;
+
+	&:hover, &:focus {
+		border: solid 1px $ta-gray;
+		background-color: $ta-lt-gray;
+		color: $ta-black;
+
+		span.nav-toggle-text{
+			color: darken($ta-gray, 15%);
+			@include transition(all 0.3s ease-in-out);
+		}
+	}
+/*	&:active {
+		background-color: $nav-toggle-bg-color-hover;
+		color: $nav-toggle-text-color-hover;
+	}*/
+
+	img{
+		float: left;
+	}
+
+	span.nav-toggle-text{
+		line-height: 30px;
+		color: $ta-gray;
+		padding-left: 0.25em;
+		text-shadow: none;
+	}
+}
 
 /*********************
 POSTS & CONTENT STYLES
@@ -728,11 +832,72 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
+.sidebar {
+	margin-top: 0;
+}
 
 	.widgettitle {}
 
 	.widget {
+
+		h4.widgettitle {
+			display: none;
+			border: none;
+		}
+
+		.widget_text {
+			margin-top: 0;
+			padding-top: 2em;
+			padding-left: 0;
+		}
+
+		form#searchform {
+			label {
+				display: none;
+			}
+		}
+
+		.textwidget {
+			padding-top: 1.7em;
+			#mailinglist {
+				text-align: center;
+				border-radius: 1em;
+				-webkit-box-shadow: 2px 4px 5px rgba(50, 50, 50, 0.4);
+				-moz-box-shadow:    2px 4px 5px rgba(50, 50, 50, 0.4);
+				box-shadow:         2px 4px 5px rgba(50, 50, 50, 0.4);
+				font-size: 1.2em;
+				background-color: black;
+				color: $ta-lt-green;
+				p#uptodate {
+					margin-top: .5em;
+					margin-bottom: 0;
+				}
+				p#subscribe{
+					margin:0;
+				}
+				input {
+					margin-bottom: .7em;
+				}
+			}
+		}
+
+		.wp_twitter_widget {
+			padding-top: 1.5em;
+			padding-left: 0;
+			.wptw_header {
+				.status_display {
+				}
+				.wptp_description {
+					display: none;
+				}
+			}
+
+			ul.widget_twitter {
+				li {
+					font-size: 80%;
+				}
+			}
+		}
 
 		ul {
 
@@ -751,6 +916,30 @@ SIDEBARS & ASIDES
 
 		}
 
+	}
+
+	.wen-side-socials {
+		width: 100%;
+		padding-bottom: 2em;
+		padding-left: 10px;
+		h2 {
+			text-align: left;
+			color: $ta-black;
+		}
+
+		ul.wen-social-links {
+			text-align: center;
+			display: block;
+			li {
+				display: inline-block;
+				position: relative;
+				text-align: center;
+				a {
+					background-color: $ta-gray;
+					border-radius: 50%;
+				}
+			}
+		}
 	}
 
 /*********************
@@ -782,4 +971,11 @@ FOOTER STYLES
 
 
 	.copyright {}
+
+
+
+/************************
+CUSTOM STYLES
+************************/
+
 

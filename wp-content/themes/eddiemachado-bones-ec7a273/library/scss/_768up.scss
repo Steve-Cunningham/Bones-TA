@@ -24,14 +24,18 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	max-width: 1140px;
+	max-width: 960px;
 }
 
 /*********************
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+	#category-header {
+	display: block;
+	}
+}
 
 	#logo {}
 
@@ -40,7 +44,7 @@ NAVIGATION STYLES
 *********************/
 
 .nav {
-	background: #eee;
+	background: none;
 	border: 0;
 	ul {
 		margin-top:0;
@@ -48,6 +52,7 @@ NAVIGATION STYLES
 	li {
 		float: left;
 		position: relative;
+		font-size: 1.1em;
 
 		a {
 			border-bottom: 0;
@@ -70,7 +75,6 @@ NAVIGATION STYLES
 		ul.sub-menu,
 		ul.children {
 			margin-top: 0;
-			border: 1px solid #ccc;
 			border-top: 0;
 			position: absolute;
 			overflow: hidden;
@@ -84,7 +88,6 @@ NAVIGATION STYLES
 					border-right: 0;
 					display: block;
 					width: 180px;
-					border-bottom: 1px solid #ccc;
 
 					&:hover,
 					&:focus {}
@@ -140,7 +143,7 @@ SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
-	margin-top: 2.2em;
+	margin-top: 0;
 }
 
 	.widgettitle {
@@ -282,4 +285,5 @@ mobile. Make sure to double check these!
 		}
 	}
 } /* end .footer-links */
+
 

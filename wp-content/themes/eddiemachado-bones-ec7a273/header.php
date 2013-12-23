@@ -62,4 +62,37 @@
 
 				</div>
 
+				<div id="category-header" class="wrap clearfix">
+
+					<div class="threecol clearfix first">
+					<?php if ( is_active_sidebar( 'header-block-1' ) ) : ?>
+
+						<?php dynamic_sidebar( 'header-block-1' ); ?>
+
+					<?php endif; ?>
+					</div><!-- end .threecol -->
+					<div class="threecol clearfix">
+					<?php if ( is_active_sidebar( 'header-block-2' ) ) : ?>
+
+						<?php dynamic_sidebar( 'header-block-2' ); ?>
+
+					<?php endif; ?>
+					</div><!-- end .threecol -->
+					<div class="threecol clearfix">
+					<?php if ( is_active_sidebar( 'header-block-3' ) ) : ?>
+
+						<?php dynamic_sidebar( 'header-block-3' ); ?>
+
+					<?php endif; ?>
+					</div><!-- end .threecol -->
+					<div class="threecol clearfix last">
+					<?php if ( is_active_sidebar( 'header-block-4' ) ) : ?>
+
+						<?php dynamic_sidebar( 'header-block-4' ); ?>
+
+					<?php endif; ?>
+
+				</div>
+
+
 			</header>

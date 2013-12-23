@@ -84,6 +84,45 @@ function bones_register_sidebars() {
 		'after_title' => '</h4>',
 	));
 
+  	register_sidebar(array(
+  		'name' => 'header Block 1',
+  		'id'   => 'header-block-1',
+  		'description'   => 'Widget area 1 in header.',
+		'before_widget' => '<div id="%1$s" class="first widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+  	));
+  
+  	register_sidebar(array(
+  		'name' => 'header Block 2',
+  		'id'   => 'header-block-2',
+  		'description'   => 'Widget area 2 in header.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+  	));
+  
+  	register_sidebar(array(
+  		'name' => 'header Block 3',
+  		'id'   => 'header-block-3',
+  		'description'   => 'Widget area 3 in header.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+  	));
+  
+  	register_sidebar(array(
+  		'name' => 'header Block 4',
+  		'id'   => 'header-block-4',
+  		'description'   => 'Widget area 4 in header.',
+		'before_widget' => '<div id="%1$s" class="last widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+  	));
 	/*
 	to add more sidebars or widgetized areas, just copy
 	and edit the above sidebar code. In order to call
