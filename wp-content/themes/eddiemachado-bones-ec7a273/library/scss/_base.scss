@@ -280,6 +280,17 @@ and more scalable.
 
 	} /* end .menu li */
 
+	ul.footer-nav {
+		background-color: $ta-lt-gray;
+		li {
+			background-color: $ta-lt-gray;
+			a {
+				background-color: $ta-lt-gray !important;
+				color: $ta-black !important;
+			}
+		}
+	}
+
 	/* highlight current page */
 	li.current-menu-item,
 	li.current_page_item,
@@ -948,6 +959,19 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
+	#inner-footer {
+		nav {
+			ul#menu-footer {
+				li {
+					a {
+						background-color: $ta-lt-gray;
+						color: $ta-black;
+						font-size: .8em;
+					}
+				}
+			}
+		}
+	}
 }
 
 	/*
